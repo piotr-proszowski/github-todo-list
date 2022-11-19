@@ -1,21 +1,34 @@
 'use strict';
 
-// With background scripts you can communicate with popup
-// and contentScript files.
-// For more information on background script,
-// See https://developer.chrome.com/extensions/background_pages
+const toDoListStorage = {
+  get: (cb) => {
+    chrome.storage.local.get(['todo'], (result) => {
+      cb(result.todo);
+    });
+  },
+  set: (value, cb) => {
+    chrome.storage.local.set(
+      {
+        todo: value,
+      },
+      () => { cb() }
+    );
+  },
+};
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.type === 'GREETINGS') {
-    const message = `Hi ${
-      sender.tab ? 'Con' : 'Pop'
-    }, my name is Bac. I am from Background. It's great to hear from you.`;
-
-    // Log message coming from the `request` parameter
-    console.log(request.payload.message);
-    // Send a response message
-    sendResponse({
-      message,
+  if (request.type === 'SAVE_TO_DO_ITEMS') {
+    const toDoItems = request.payload.toDoItems
+    toDoListStorage.set(toDoItems, () => {
+        sendResponse({toDoItems});
     });
+    return true
+  }
+
+  if(request.type === 'FETCH_TO_DO_LIST') {
+    toDoListStorage.get((todo) => {
+      sendResponse({items: todo});
+    });
+    return true
   }
 });
