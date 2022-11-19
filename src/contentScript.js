@@ -1,5 +1,5 @@
 const toDoItems = [...document.getElementsByClassName("unminimized-comment")]
-  .filter(comment => comment.getElementsByClassName("task-list-item enabled").length > 0)
+  .filter(comment => comment.getElementsByClassName("task-list-item").length > 0)
   .map(comment => {
     const obj = {}
     obj['url'] = `${comment.baseURI}#${comment.id}`

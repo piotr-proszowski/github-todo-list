@@ -22,8 +22,12 @@
       const items = response.items;
       items.forEach(item => {
         const listItem = document.createElement("li");
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox"
+        checkbox.name = item.content
+        listItem.appendChild(checkbox);
         const link = document.createElement("a");
-        link.textContent = item.content
+        link.innerText = item.content
         link.setAttribute("href", item.url)
         listItem.appendChild(link);
         toDoList.appendChild(listItem);
