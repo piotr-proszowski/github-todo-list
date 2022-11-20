@@ -5,7 +5,10 @@ function getToDoItems() {
     .map(comment => {
       const baseUri = comment.baseURI
       const indexOfHash = baseUri.indexOf("#")
-      const newUri = baseUri.substring(0, indexOfHash)
+      let newUri = baseUri
+      if(indexOfHash > 0) {
+        newUri = baseUri.substring(0, indexOfHash)
+      }
       const obj = {};
       obj['url'] = `${newUri}#${comment.id}`;
       obj['content'] = `${comment.getElementsByClassName("task-list-item")[0].innerText}`;
