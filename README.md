@@ -19,7 +19,9 @@ However, you can easily install extension in developer mode: https://bashvlas.co
 
 Suggestions and pull requests are welcomed! I'm not a frontend expert so I'm pretty sure there is a lot of room for improvement :) 
 
----
+## Credits:
+- [Mahmoud El Hakim](https://codepen.io/elhakimdev) for [beautiful pure CSS To Do List](https://codepen.io/elhakimdev/pen/qVyqvB)
+- [Hover.css](https://ianlunn.github.io/Hover/) for animation on hover
 
-This project was bootstrapped with [Chrome Extension CLI](https://github.com/dutiyesh/chrome-extension-cli)
+- [Chrome Extension CLI](https://github.com/dutiyesh/chrome-extension-cli) for bootstraping this project
 
