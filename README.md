@@ -4,7 +4,7 @@
 Bitbucket's [pull-request-tasks](https://bitbucket.org/blog/introducing-pull-request-tasks) substitute. 
 
 
-When I receive some feedback on my pull request I like to go through them and create to do list. For example `- [ ] fix typo` or `- [ ] discuss this concept offline`. From time to time this list happens to be pretty big - especially when changes I propose are controversial. For this cases `Github Todo List` has been created. It gathers all those to do list items and help with navigating through them.
+When I receive comments on my pull request I like to go through them and create to do list. For example `- [ ] fix typo` or `- [ ] discuss this concept offline`. From time to time this list happens to be pretty big - especially when changes I propose are controversial. For this cases `Github Todo List` has been created. It gathers all those to do list items and help with navigating through them.
 
 ## Demo
 ![Demo](./demo.gif)
