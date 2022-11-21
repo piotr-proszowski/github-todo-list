@@ -49,6 +49,16 @@ import './popup.css';
       });
   }
 
+  function toggleCheckBox(elementTitle, checkbox, tab, item) {
+    elementTitle.classList.toggle("done-crossed-out");
+    checkbox.classList.toggle("done");
+    chrome.tabs.sendMessage(
+      tab.id,
+      {type: 'TOGGLE_TODO_TASK', payload: {task: item}},
+      {},
+      (response) => {});
+  }
+
   async function getCurrentTab() {
     let queryOptions = { active: true, lastFocusedWindow: true };
     let [tab] = await chrome.tabs.query(queryOptions);
@@ -59,7 +69,7 @@ import './popup.css';
     .then((tab) => {
       chrome.tabs.sendMessage(
         tab.id,
-        {type: 'LOAD_TO_DO_ITEMS', payload: 'example message from popup.js'},
+        {type: 'LOAD_TO_DO_ITEMS'},
         {},
         (response) => {
           const toDoList = document.getElementById("todo-list");
@@ -89,10 +99,7 @@ import './popup.css';
             toDoList.appendChild(listItem);
 
             listItem.addEventListener("click", () => { scrollToComment(item.url)});
-            checkbox.addEventListener("click", () => {
-              elementTitle.classList.toggle("done-crossed-out");
-              checkbox.classList.toggle("done");
-            });
+            checkbox.addEventListener("click", () => { toggleCheckBox(elementTitle, checkbox, tab, item) });
           });
         });
     });
