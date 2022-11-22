@@ -15,8 +15,7 @@ Extension is not yet in Chrome Webstore - review is still pending.
 
 However, you can easily install extension in developer mode: https://bashvlas.com/blog/install-chrome-extension-in-developer-mode/
 
-For those who trust me and don't want to bother with build itself - I added release with zip file so you don't need to build it yourself.
-You can create such `.zip` by yourself by typing `npm run build`.
+I added release with `.zip` file so you don't need to build it yourself. However, you can create such `.zip` by yourself by typing `npm run build`.
 
 ## Contribution
 
