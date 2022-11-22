@@ -15,6 +15,9 @@ Extension is not yet in Chrome Webstore - review is still pending.
 
 However, you can easily install extension in developer mode: https://bashvlas.com/blog/install-chrome-extension-in-developer-mode/
 
+For those who trust me and don't want to bother with build it itself - I added `github-todo-list.zip` so you don't need to build it yourself.
+You can create such `.zip` by yourself by typing `npm run build`.
+
 ## Contribution
 
 Suggestions and pull requests are welcomed! I'm not a frontend expert so I'm pretty sure there is a lot of room for improvement :) 
