@@ -4,18 +4,16 @@
 Bitbucket's [pull-request-tasks](https://bitbucket.org/blog/introducing-pull-request-tasks) substitute. 
 
 
-When I receive comments on my pull request I like to go through them and create to do list. For example `- [ ] fix typo` or `- [ ] discuss this concept offline`. From time to time this list happens to be pretty big - especially when changes I propose are controversial. For this cases `Github Todo List` has been created. It gathers all those to do list items and help with navigating through them.
+When I receive comments on my pull request I like to go through them and create to do list. For example `- [ ] fix typo` or `- [ ] discuss this concept offline`. From time to time this list happens to be pretty big - especially when changes I propose are controversial. For these cases `Github Todo List` has been created. It gathers all those to do list items and help with navigating through them.
 
 ## Demo
 ![Demo](./demo.gif)
 
 ## Install
 
-Extension is not yet in Chrome Webstore - review is still pending. 
+You an install it via [chrome web store](https://chrome.google.com/webstore/detail/github-todo-list/gcbokjjkcmplpmcohkbgcpdimladjidn)
 
-However, you can easily install extension in developer mode: https://bashvlas.com/blog/install-chrome-extension-in-developer-mode/
-
-I added release with `.zip` file so you don't need to build it yourself. However, you can create such `.zip` by yourself by typing `npm run build`.
+Alternative option is to using `.zip` file from releases on Github or build it yourself by running `npm run build` and installing plugin in [developer mode](https://bashvlas.com/blog/install-chrome-extension-in-developer-mode/)
 
 ## Contribution
 
